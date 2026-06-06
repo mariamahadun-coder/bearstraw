@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inquiry | Seria Craft Mini Boutique</title>
+    <title>Inquiry | Sereia Craft Mini Boutique</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -41,48 +41,97 @@
                 <p class="text-pink-700 max-w-2xl mx-auto">Perfect for pastel bouquets, fuzzy wire charms, and tiny gifts with romantic flair.</p>
             </div>
 
-            <form class="space-y-6">
-                <div class="grid gap-6 md:grid-cols-2">
-                    <label class="block text-pink-800">
-                        Your Name
-                        <input type="text" placeholder="Your name" class="mt-2 w-full rounded-3xl border border-pink-300 bg-white px-4 py-3 text-pink-900 outline-none focus:border-pink-500" />
-                    </label>
-                    <label class="block text-pink-800">
-                        Email
-                        <input type="email" placeholder="you@example.com" class="mt-2 w-full rounded-3xl border border-pink-300 bg-white px-4 py-3 text-pink-900 outline-none focus:border-pink-500" />
-                    </label>
-                </div>
-                <label class="block text-pink-800">
-                    Project Type
-                    <select class="mt-2 w-full rounded-3xl border border-pink-300 bg-white px-4 py-3 text-pink-900 outline-none focus:border-pink-500">
-                        <option>Fuzzy wire charm</option>
-                        <option>Mini bouquet</option>
-                        <option>Hair accessory</option>
-                        <option>Gift set</option>
-                        <option>Other custom piece</option>
-                    </select>
-                </label>
-                <label class="block text-pink-800">
-                    Tell us about your idea
-                    <textarea rows="5" placeholder="Colors, style, and special details..." class="mt-2 w-full rounded-3xl border border-pink-300 bg-white px-4 py-3 text-pink-900 outline-none focus:border-pink-500"></textarea>
-                </label>
-                <div class="grid gap-6 md:grid-cols-2">
-                    <label class="block text-pink-800">
-                        Preferred Delivery Date
-                        <input type="date" class="mt-2 w-full rounded-3xl border border-pink-300 bg-white px-4 py-3 text-pink-900 outline-none focus:border-pink-500" />
-                    </label>
-                    <label class="block text-pink-800">
-                        Budget Range
-                        <input type="text" placeholder="₱1,500 - ₱3,000" class="mt-2 w-full rounded-3xl border border-pink-300 bg-white px-4 py-3 text-pink-900 outline-none focus:border-pink-500" />
-                    </label>
-                </div>
-                <button type="submit" class="w-full rounded-full bg-pink-500 px-8 py-3 text-white text-lg font-semibold transition hover:bg-pink-600">Submit Inquiry</button>
-            </form>
+            <form id="inquiryForm" class="space-y-6">
+
+    <div class="grid gap-6 md:grid-cols-2">
+        <label class="block text-pink-800">
+            Your Name
+            <input type="text" placeholder="Your name" class="mt-2 w-full rounded-3xl border border-pink-300 bg-white px-4 py-3 text-pink-900 outline-none focus:border-pink-500" />
+        </label>
+
+        <label class="block text-pink-800">
+            Email
+            <input type="email" placeholder="you@example.com" class="mt-2 w-full rounded-3xl border border-pink-300 bg-white px-4 py-3 text-pink-900 outline-none focus:border-pink-500" />
+        </label>
+    </div>
+
+    <label class="block text-pink-800">
+        Project Type
+        <select class="mt-2 w-full rounded-3xl border border-pink-300 bg-white px-4 py-3 text-pink-900 outline-none focus:border-pink-500">
+            <option>Fuzzy wire charm</option>
+            <option>Mini bouquet</option>
+            <option>Hair accessory</option>
+            <option>Gift set</option>
+            <option>Other custom piece</option>
+        </select>
+    </label>
+
+    <label class="block text-pink-800">
+        Tell us about your idea
+        <textarea rows="5" placeholder="Colors, style, and special details..." class="mt-2 w-full rounded-3xl border border-pink-300 bg-white px-4 py-3 text-pink-900 outline-none focus:border-pink-500"></textarea>
+    </label>
+
+    <div class="grid gap-6 md:grid-cols-2">
+        <label class="block text-pink-800">
+            Preferred Delivery Date
+            <input type="date" class="mt-2 w-full rounded-3xl border border-pink-300 bg-white px-4 py-3 text-pink-900 outline-none focus:border-pink-500" />
+        </label>
+
+        <label class="block text-pink-800">
+            Budget Range
+            <input type="text" placeholder="₱1,500 - ₱3,000" class="mt-2 w-full rounded-3xl border border-pink-300 bg-white px-4 py-3 text-pink-900 outline-none focus:border-pink-500" />
+        </label>
+    </div>
+
+    <button type="submit"
+    class="w-full rounded-full bg-pink-500 px-8 py-3 text-white text-lg font-semibold transition hover:bg-pink-600">
+        Submit Inquiry
+    </button>
+
+    <!-- THANK YOU MESSAGE -->
+    <div id="thankYouMessage"
+    class="hidden mt-6 bg-pink-50 border-2 border-pink-300 rounded-3xl p-6 text-center shadow-lg">
+
+        <div class="text-5xl mb-3">💖</div>
+
+        <h3 class="text-3xl font-bold text-pink-800 mb-2">
+            Thank You!
+        </h3>
+
+        <p class="text-pink-700">
+            Your inquiry has been submitted successfully.
+            Thank you for choosing Sereia Craft Mini Boutique.
+            We will contact you as soon as possible! ✨
+        </p>
+
+    </div>
+
+</form>
         </section>
     </main>
 
     <footer class="bg-pink-800 text-pink-100 py-6 text-center stylish-border mx-4 rounded-[2rem]">
         <p>&copy; 2026 Sereia Craft Mini Boutique. Coquette style inquiry page.</p>
     </footer>
+
+    <script>
+
+document.getElementById("inquiryForm").addEventListener("submit", function(event){
+
+    event.preventDefault();
+
+    document.getElementById("thankYouMessage")
+    .classList.remove("hidden");
+
+    this.reset();
+
+    setTimeout(() => {
+        window.location.href = "website.html";
+    }, 3000);
+
+});
+
+</script>
+
 </body>
 </html>
