@@ -63,8 +63,7 @@ You are customizing: <span id="productName" class="font-bold text-pink-600"></sp
 
 </div>
 
-<form class="space-y-6">
-
+<form onsubmit="showThankYou(event)" class="space-y-6">
 <!-- NAME -->
 <label class="block text-pink-800">
 Your Name
@@ -114,6 +113,24 @@ class="w-full rounded-full bg-gradient-to-r from-pink-400 to-pink-500 px-8 py-4 
 💕 Submit Customization
 </button>
 
+<!-- THANK YOU MESSAGE -->
+<div id="thankYouMessage"
+style="display:none"
+class="mt-6 bg-pink-50 border-2 border-pink-300 rounded-3xl p-6 text-center shadow-lg">
+
+    <div class="text-5xl mb-3">💖</div>
+
+    <h3 class="text-3xl font-bold text-pink-800 mb-2">
+        Thank You!
+    </h3>
+
+    <p class="text-pink-700 text-lg">
+        Your customization request has been submitted successfully.
+        We will contact you soon regarding your dream design. ✨
+    </p>
+
+</div>
+
 </form>
 
 </section>
@@ -133,5 +150,23 @@ if(product === "bouquet") product = "Bouquet";
 document.getElementById("productName").textContent = product || "Unknown Item";
 </script>
 
+<script>
+
+function showThankYou(event){
+
+    event.preventDefault();
+
+    document.getElementById("thankYouMessage").style.display = "block";
+
+    setTimeout(function(){
+
+        window.location.href = "index.html";
+
+    }, 3000);
+
+}
+
+</script>
 </body>
+
 </html>
